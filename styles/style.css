@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    background-color: #e4f6f8;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ------- Header ------- */
+
+.header{
+    background-color: #48838B;
+    color: white;
+    padding: 15px;
+}
+
+.header__title{
+    text-align: center;
+    padding: 10px;
+}
+
+.header__nav{
+    padding-top: 15px;
+}
+
+.header__nav ul{
+    display: flex;
+    justify-content: space-around;   
+}
+
+.header__nav a{
+    color:white;
+}
+
+@media (min-width: 1024px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__nav{
+        width: 50vw;
+    }
+}
+
+/* ------- Hero ------- */
+.hero{
+    height: 85vh;
+
+    background: #000 url(../img/portada_web.jpg) center / cover no-repeat fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title{
+    color: white;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.hero__title{
+    animation: animation-title 4s ease-in-out 0.3s infinite 
+}
+
+@keyframes animation-title {
+    0%{
+        text-align: center;
+    }
+    25%{
+        transform: translateY(-150px) scale(1.3);
+    }
+    50%{
+        transform: translateY(150px) scale(1.3);
+        overflow: hidden;
+    }
+    100%{
+        text-align: center;
+    }
+}
+
+/* ------- Main ------- */
+
+.product_index_title{
+    text-align: center;    
+    padding: 20px;
+}
+
+/* - Tarjetas Productos - */
+.card{
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 250px;
+    min-width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_img{
+    width: 90%;
+    padding: 10px 0px;
+    border-radius: 30px;   
+    transition: all 0.5s ease 0.5ms; 
+}
+
+.card_img:hover{
+    transform: scale(2);
+}
+
+.card_title{
+    padding-bottom: 10px;
+}
+
+/* - Slider Producto - */
+.container_product{
+    display: flex;
+    overflow: scroll;
+    padding: 0px 15px 20px 15px;
+    gap: 10px;
+}
+
+@media (max-width: 1023px){
+    .container_product{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1320px){
+    .container_product{
+        justify-content: center;
+        overflow: hidden;
+    }
+}
+
+/* -- Footer -- */
+footer{
+    background-color: #48838B;
+    color: white;
+    padding: 15px;
+}
+
+footer nav ul li a{
+    color: white;
+}
+
+.lista-footer{
+    font-size: 1rem;
+}
+  
+.lista-footer ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;  
+}
+  
+.lista-footer li{
+    padding-left: 10px;
+}
+
+/* -------------------- NOSOTROS -------------------- */
+
+@media (max-width: 1024px){
+    .body-nosotros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr, 2fr, 1fr;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+}
+
+.quienes_somos1{
+    text-align: center;
+    height: 220px;
+    margin: 0rem auto;
+    width: 400px;
+}
+
+.quienes_somos1 h2{
+    padding-top: 25px;
+}
+
+.quienes_somos1 p{
+    display: flex;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.nosotros img {
+    margin-left: 145px;
+    width: 50%;
+    padding-left: 600px;
+    /* overflow: hidden; */
+  }
+
+.quienes_somos2{
+    text-align: center;
+    height: 220px;
+    margin: 0rem auto;
+    width: 400px;
+    padding-top: 20px;
+}
+
+.quienes_somos2 p{
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+iframe {
+    margin-left: 145px;
+    width: 50%;
+    padding-left: 600px;
+    padding-bottom: 35px;
+    padding-top: 25px;
+  }
+
+/* -------------------- GALERIA -------------------- */
+
+.row h2{
+    padding: 0px 0px 10px 0px;
+}
+
+img{
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    padding: 50px;
+}
+
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+
+.column img{
+    margin-top: 5px;
+}
+
+@media (max-width: 973px){
+    .main-gale{
+        height: 90vh;
+        overflow-y: scroll;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+    }     
+}
+
+/* -------------------- Equipo -------------------- */
+
+ .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+    flex-direction: column;
+    overflow: hidden;
+ }
+
+ .card-container{
+    display: flex;
+    width: 600px;
+    height: auto;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2);
+    margin: 20px;
+ }
+
+ .head{
+    border-right: 1px solid #ddd;
+ }
+
+.descripcion{
+    background: #fbfbfb;
+}
+
+.head, .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+
+.head a{
+    position: relative;
+    display: block;
+}
+
+.head img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    margin-top: 15px;
+}
+
+.head h2{
+    font-size: 20px;
+    color: #f0522a;
+    margin-top: 15px;
+}
+
+.head h3{
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.descripcion{
+    position: relative;
+}
+
+.descripcion p{
+    margin: 20px 30px;
+}
+
+@media (max-width: 767px){
+    
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        overflow-y: scroll;
+    }
+
+    .descripcion{
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+/* -------------------- Contáctenos -------------------- */
+
+.fondo{
+    background-image: url(../img/fondo.png);
+}
+
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px; 
+    border-radius: 5px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    transition: all 1s ease 1ms;
+}
+
+.form-register:hover{
+    transform: rotate(360deg);
+}
+
+.form-register h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-family: 'calibri';
+    font-size: 17px;
+    color: white;
+}
+
+.form-register label{
+    font-size: 15px;
+}
+
+.form-register label a{
+    color: white;
+    text-decoration: none;
+    padding-right: 6px;
+    line-height: 40px;
+}
+
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register p{
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.form-register p a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-register .botons{
+    width: 100%;
+    border: none;
+    padding: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    background-color: #d7edf0;
+}
+
+.follow{
+    /* background-color: aqua; */
+    margin: 35px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow__title{
+    background-color: green;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.redes{
+    width: 18vw;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.4s ease-in-out 0.5s;
+}
+
+.redes i{
+    font-size: 1.3rem;
+    color: black;
+}
+
+.lista-footer_contact{
+    margin-top: 299px;
+}
+
+.redes i:hover{
+    font-size: 2rem;
+    color: blue;
+}
+
+@media (max-width: 1023px){
+    .follow{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .follow__title{
+        margin: 10px;
+    }
+
+    .redes{
+        margin: 10px;
+    }
+
+    .redes i:hover{
+        font-size: 1.3rem;
+        color: red;
+    }
+}
