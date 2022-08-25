@@ -1,0 +1,144 @@
+.header {
+  background-color: #48838B;
+  color: white;
+  padding: 15px;
+}
+.header__title {
+  text-align: center;
+  padding: 10px;
+}
+.header__nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header__nav ul li {
+  list-style-type: none;
+}
+.header__nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav {
+    width: 50vw;
+  }
+}
+.hero {
+  height: 91.5vh;
+  background: url(../img/portada_web.jpg) center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title {
+  color: white;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: animation-title 4s ease-in-out 0.3s infinite;
+}
+
+@keyframes animation-title {
+  0% {
+    text-align: center;
+  }
+  25% {
+    transform: translateY(-150px) scale(1.4);
+    overflow: hidden;
+  }
+  50% {
+    transform: translateY(150px) scale(1.4);
+    overflow: hidden;
+  }
+  100% {
+    text-align: center;
+  }
+}
+footer {
+  background-color: #48838B;
+  padding: 15px;
+}
+footer .lista-footer {
+  font-size: 1rem;
+}
+footer .lista-footer ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+footer .lista-footer ul li {
+  margin: 10px;
+}
+footer .lista-footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  background-color: #e4f6f8;
+}
+
+.product_index_title {
+  text-align: center;
+  padding: 20px;
+}
+
+.container_product {
+  display: flex;
+  overflow: scroll;
+  padding: 0px 15px 20px 15px;
+  gap: 10px;
+}
+.container_product .cards {
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_product .cards_img {
+  width: 90%;
+  padding: 10px 0px;
+  border-radius: 30px;
+  transition: all 0.5s ease 0.5ms;
+}
+.container_product .cards_img:hover {
+  transform: scale(2);
+}
+.container_product .cards_title {
+  padding-bottom: 10pxx;
+}
+
+@media (max-width: 1023px) {
+  .container_product {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1320px) {
+  .container_product {
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

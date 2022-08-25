@@ -1,0 +1,20 @@
+{
+  "name": "desafios_proyecto_git",
+  "version": "1.0.0",
+  "description": "Es la primera vez usando GitHub, espero todo salga bien.\r Bienvenidos a mi Proyecto!!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-sass": "sass --watch scss/main.scss styles/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisnc-hub/desafios_proyecto_git.git"
+  },
+  "author": "Luis Narvaez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisnc-hub/desafios_proyecto_git/issues"
+  },
+  "homepage": "https://github.com/luisnc-hub/desafios_proyecto_git#readme"
+}
