@@ -1,0 +1,16 @@
+@keyframes animation-title {
+    0%{
+        text-align: center;
+    }
+    25%{
+        transform: translateY(-150px) scale(1.4);
+        overflow: hidden;
+    }
+    50%{
+        transform: translateY(150px) scale(1.4);
+        overflow: hidden;
+    }
+    100%{
+        text-align: center;
+    }
+}

@@ -1,0 +1,65 @@
+// Header
+
+@mixin portatil {
+    @media (min-width: 1024px){
+        @content;
+    }
+}
+
+// Home (index.html)
+
+@mixin max_product {
+    @media (max-width: 1023px){
+        @content
+    }
+}
+
+@mixin min_product {
+    @media (min-width: 1320px){
+        @content;
+    }
+}
+
+// Nosotros (nosotros.html)
+
+@mixin nosotros {
+    @media (max-width: 900px){
+        @content;
+    }
+}
+
+// Galeria (galeria.html)
+
+@mixin main_galeria {
+    @media (max-width: 973px){
+        @content
+    }
+}
+
+@mixin column {
+    @media (min-width: 975px){
+        @content;
+    }
+}
+
+// Equipo (equipo.html)
+
+@mixin tarjeta {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+// Contacto (contacto.html)
+
+@mixin formulario {
+    @media(max-width: 900px){
+        @content
+    }
+}
+
+@mixin redes {
+    @media (max-width: 1023px){
+        @content
+    }
+}

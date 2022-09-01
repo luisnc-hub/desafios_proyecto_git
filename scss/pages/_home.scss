@@ -1,0 +1,45 @@
+.product_index_title{
+    text-align: center;
+    padding: 20px;
+}
+
+.container_product{
+    display: flex;
+    overflow-x: scroll;
+    padding: 0px 15px 20px 15px;
+    gap: 10px;
+    @include max_product{
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    @include min_product{
+        justify-content: center;
+        overflow: hidden;
+    }
+    .cards{
+        width: 250px;
+        border: 2px solid black;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 250px;
+        min-width: 250px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &_img{
+            width: 90%;
+            padding: 10px 0px;
+            border-radius: 30px;   
+            transition: all 0.5s ease 0.5ms; 
+            &:hover{
+                transform: scale(2);
+            }
+        }
+        &_title{
+            padding-bottom: 10pxx;
+        }
+    }
+}

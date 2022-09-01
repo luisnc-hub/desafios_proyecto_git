@@ -1,0 +1,167 @@
+.fondo{
+    background-image: url(../img/fondo.png)
+}
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-style: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 30px #000;
+    transition: all 1s ease 1ms;
+
+    @include formulario {
+        transition: none;
+    }
+    &:hover{
+        transform: rotate(360deg);
+    }
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .controls{
+        width: 100%;
+        background:#24303c;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 16px;
+        border: 1px solid white;
+        font-family: 'calibri';
+        font-size: 1.1rem;
+        color: white;
+    }
+    label{
+        font-size: 0.9rem;
+        a{
+            color: white;
+            text-decoration: none;
+            padding-right: 6px;
+            line-height: 40px;
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+    .botons{
+        width: 100%;
+        border: none;
+        padding: 8px;
+        margin: 16px 0;
+        font-size: 0.9rem;
+        background-color: #d7edf0;
+    }
+    p{
+        height: 30px;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 40px;
+    }
+}
+
+.follow{
+    margin: 35px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__title{
+        background-color: green;
+        text-align: center;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 7px 13px 30px #000;
+
+        @include redes{
+            margin: 10px;
+        }
+    }
+    .redes{
+        width: 18vw;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        transition: all 0.4s ease-in-out 0.5s;
+
+        .bi-tiktok{
+            color: map-get($redes, "tiktok");
+            &:hover{
+                font-size: 1.8rem;
+                color: #0d3d63;
+            }
+
+            @include redes{
+                margin: 8px;
+            }
+            &:hover{
+                @include redes{
+                   font-size: 1.5rem;
+                   color: black;
+                }
+            }
+        }
+        .bi-instagram{
+            color: map-get($redes, "instagram");
+            &:hover{
+                font-size: 1.8rem;
+                color: #1d6117;
+            }
+
+            @include redes{
+                margin: 8px;
+            }
+            &:hover{
+                @include redes{
+                   font-size: 1.5rem;
+                   color: grey;
+                }
+            }
+        }
+        .bi-facebook{
+            color: map-get($redes, "facebook");
+            &:hover{
+                font-size: 1.8rem;
+                color: #5c271a;
+            }
+
+            @include redes{
+                margin: 8px;
+            }
+            &:hover{
+                @include redes{
+                   font-size: 1.5rem;
+                   color: black;
+                }
+            }
+        }
+        .bi-twitter{
+            color: map-get($redes, "twitter");
+            &:hover{
+                font-size: 1.8rem;
+                color: #5f55ee;
+            }
+
+            @include redes{
+                margin: 8px;
+            }
+            &:hover{
+                @include redes{
+                   font-size: 1.5rem;
+                   color: grey;
+                }
+            }
+        }
+    }
+}

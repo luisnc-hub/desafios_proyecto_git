@@ -1,0 +1,24 @@
+$color-primary: #e4f6f8;
+$color-secondary: #48838B;
+
+// Extend
+
+%listas{
+    li{
+        list-style-type: none;
+        color: white;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+// Maps
+
+$redes: (
+    tiktok: #55acee,
+    instagram: #62ee55,
+    facebook: #ee7455,
+    twitter: #5f55ee
+)

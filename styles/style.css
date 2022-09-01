@@ -324,7 +324,7 @@ img{
     overflow: hidden;
  }
 
- .card-container{
+ .container__card{
     display: flex;
     width: 600px;
     height: auto;
@@ -381,7 +381,7 @@ img{
 
 @media (max-width: 768px){
 
-    .card-container{
+    .container__card{
         display: flex;
         flex-direction: column;
         width: 300px;
